@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tool-throttle"
+version = "0.1.0"
+description = "MCP tool-call throttling: token-bucket rate limits per tool name, a fuse against runaway agents"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "hao li"}]
+keywords = ["mcp", "ai-agents", "rate-limit", "throttling", "token-bucket"]
+
+[project.scripts]
+tool-throttle = "tool_throttle.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/tool-throttle"
+
+[tool.setuptools.packages.find]
+include = ["tool_throttle*"]
